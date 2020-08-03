@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Moster",
+  "description": "Most Visited sites..",
+  "version": "1.0.0",
+  "icons": {
+    "512": "icons/icon512.png",
+    "256": "icons/icon256.png",
+    "128": "icons/icon128.png",
+    "64": "icons/icon64.png",
+    "32": "icons/icon32.png"
+  },
+  "browser_action": {
+    "default_title": "Moster",
+    "default_popup": "popup.html",
+    "browser_style": false
+  },
+  "permissions": [
+    "activeTab",
+    "topSites"
+  ]
+}

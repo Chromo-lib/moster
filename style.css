@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url(assets/OpenSans-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 250px;
+  padding: 10px;
+  background: linear-gradient(to bottom right, #000000a6, #000000de), url(assets/bg.jpg);
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 5px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: #dddddd;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+header,
+footer {
+  padding: 7px 20px;
+  background-color: #030e1a;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+svg {
+  width: 12px;
+  margin-right: 5px;
+}
+
+.truncate {
+  overflow: hidden;
+  width: 80%;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
