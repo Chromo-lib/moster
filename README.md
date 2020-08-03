@@ -13,7 +13,7 @@
 
 ### Capture
 <div align="center">
-  <img src="https://i.ibb.co/6DXtb9W/New-Bitmap-Image.png">
+  <img src="Capture.PNG">
 </div>
 
 # License
