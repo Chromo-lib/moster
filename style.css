@@ -71,8 +71,6 @@ svg {
   white-space: nowrap;
 }
 
-
-
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 4s;
@@ -80,11 +78,6 @@ svg {
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% {  opacity: 1; }
 }

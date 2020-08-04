@@ -6,11 +6,10 @@ chrome.topSites.get((sites) => {
   const topSitesUl = document.getElementById('top-sites');
 
   sites.forEach((site) => {
-    if (!site.title || !site.url) { }
-    else {
+    if (site.title && site.url) {
+      
       const li = document.createElement('li');
       const link = document.createElement('a');
-
       const gotoEl = document.createElement('a');
 
       link.href = site.url;
