@@ -15,9 +15,23 @@ body {
 }
 
 .container {
-  width: 250px;
+  width: 260px;
+  height: 310px;
   padding: 10px;
   background: linear-gradient(to bottom right, #000000a6, #000000de), url(assets/bg.jpg);
+  scrollbar-width: thin;
+  overflow-y: auto;
+}
+
+#btn-tabs>button {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex: 1 1 33%;
+  background-color: inherit;
+  border: 0;
+  outline: none !important;
+  cursor: pointer;
 }
 
 ul {
@@ -35,11 +49,11 @@ li {
   align-items: center;
 }
 
-a {
+a,#btn-tabs>svg {
   color: #dddddd;
 }
 
-a:hover {
+a:hover,#btn-tabs>svg:hover {
   color: #ffffff;
 }
 
@@ -48,6 +62,7 @@ p {
   margin: 0;
 }
 
+#btn-tabs,
 header,
 footer {
   padding: 7px 20px;
@@ -71,6 +86,13 @@ svg {
   white-space: nowrap;
 }
 
+.d-flex {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 4s;
@@ -80,4 +102,21 @@ svg {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% {  opacity: 1; }
+}
+
+/*scroll bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d313b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #030e1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b4f53e5;
 }

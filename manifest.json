@@ -16,7 +16,8 @@
     "browser_style": false
   },
   "permissions": [
-    "activeTab",
-    "topSites"
+    "history",
+    "topSites",
+    "downloads"
   ]
 }
