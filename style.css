@@ -34,6 +34,9 @@ body {
   cursor: pointer;
 }
 
+.drop {position: relative; display:flex; flex-direction: column;}
+.dropdown {position: absolute; top: 0; right: 0; display:none}
+
 ul {
   width: 100%;
   list-style: none;
@@ -75,7 +78,7 @@ footer {
 
 svg {
   width: 12px;
-  margin-right: 5px;
+  height: 12px;
 }
 
 .truncate {

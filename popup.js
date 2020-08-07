@@ -2,26 +2,25 @@ let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator
 chrome = isChrome ? chrome : browser;
 
 (function () {
-  // handle tabs
-  const btnTabs = document.getElementById('btn-tabs');
-  const tabs = document.querySelectorAll('.tab');
-
   // display data for first tab
   onSwitchTab(1);
 
   // only display the first tab
-  Array.from(tabs).forEach(el => {
+  Array.from(document.querySelectorAll('.tab')).forEach(el => {
     if (+el.dataset.id !== 1) el.style.display = 'none';
   });
 
-  Array.from(btnTabs.children).forEach(btn => {
+  // handle tabs
+  const tabs = document.querySelectorAll('.tab');
+
+  Array.from(document.getElementById('btn-tabs').children).forEach(btn => {
     btn.addEventListener('click', () => {
       Array.from(tabs).forEach(el => {
         el.style.display = 'none';
         if (btn.dataset.id === el.dataset.id) {
           el.style.display = 'block';
-          // update header title
           onSwitchTab(el.dataset.id);
+          // update header title
           document.querySelector('.title').textContent = el.dataset.title;
         }
       });
@@ -29,6 +28,16 @@ chrome = isChrome ? chrome : browser;
   });
 })();
 
+function handleDrops () {
+  Array.from(document.querySelectorAll('.drop')).forEach(el => {
+
+    console.log(el);
+    el.addEventListener('click', () => {
+      console.log(el.dataset.id);
+      document.getElementById(el.dataset.id).style.display = 'flex';
+    }, false);
+  });
+}
 
 function onSwitchTab (tab) {
   switch (parseInt(tab, 10)) {
@@ -39,11 +48,10 @@ function onSwitchTab (tab) {
 
         historySites.forEach((site) => {
           if (site.title && site.url) {
-            const list = createList(site.title, site.url);
+            const list = createList(site.title, site.url, 'history');
             historyUl.appendChild(list);
           }
         });
-        console.log(historySites);
       });
       break;
 
@@ -51,10 +59,9 @@ function onSwitchTab (tab) {
       chrome.downloads.search({}, (downloads) => {
         const downloadsUl = document.getElementById('list-downloads');
         downloadsUl.innerHTML = '';
-        console.log(downloads);
 
         downloads.slice(0, 15).forEach(file => {
-          const list = createList(extractFileName(file.filename), file.filename);
+          const list = createList(extractFileName(file.filename), file.filename, 'downloads');
           downloadsUl.appendChild(list);
         });
       });
@@ -65,7 +72,7 @@ function onSwitchTab (tab) {
         topSitesUl.innerHTML = '';
         sites.forEach((site) => {
           if (site.title && site.url) {
-            topSitesUl.appendChild(createList(site.title, site.url));
+            topSitesUl.appendChild(createList(site.title, site.url, 'top'));
           }
         });
       });
