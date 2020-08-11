@@ -21,7 +21,7 @@ export default function ListDownloads () {
 
   useEffect(() => {
     window.chrome.downloads.search({}, (downloads) => {
-      setState(downloads.slice(0, 20));
+      setState(downloads.slice(0, 30));
       setIsLoading(false);
     });
   }, []);

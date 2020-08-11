@@ -20,7 +20,7 @@ export default function ListHistory () {
     let c = window.confirm("Are you sure you wish to delete? " + site.title);
     c && window.chrome.history.deleteUrl({ url: site.url }, () => {
       setIsLoading(true);
-      window.chrome.history.search({ text: '', maxResults: 15 }, (historySites) => {
+      window.chrome.history.search({ text: '', maxResults: 30 }, (historySites) => {
         setAllSites(historySites);
         setIsLoading(false);
       });
