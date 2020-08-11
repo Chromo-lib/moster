@@ -20,14 +20,14 @@
 body {margin: 0; overflow-x: hidden;}
 
 .container {
-  width: 250px;
-  height: 340px;
+  width: 260px;
+  height: 360px;
   background: linear-gradient(to bottom right, #000000a6, #000000de), url(assets/bg.jpg);
   color: #ffffff;
   text-transform: uppercase;
 }
 
-.list {height: 280px; overflow-y: auto; scrollbar-width: thin; }
+.list {height: 300px; overflow-y: auto; scrollbar-width: thin; }
 
 header,.tabs {height:30px; background-color: #030e1a;}
 
@@ -42,15 +42,17 @@ li:hover {background-color: var(--bg-hover);}
 a { text-decoration: none; transition: all .25s;}
 a:hover {color: #ffffff !important; }
 
-button {    background-color: #ff5151;
-  color: #fff; border-radius: 4px; border: 1px solid #000; box-shadow: var(--box-shadow); transition:all .25s}
+svg { width: 12px;  height: 12px;}
+svg path {fill: #dddddd;}
+svg path:hover {fill: #00BCD4}
 
-button:hover {background-color: #030e1a; }
+button {    background-color: inherit;
+  color: #fff; border-radius: 4px; border: 0; transition:background .25s}
 
-svg {
-  width: 12px;
-  height: 12px;
-}
+button:hover {background-color: #ff5151; }
+
+button svg { width: 10px; }
+button svg path:hover {fill: #ffffff}
 
 hr {
   margin: 0;
