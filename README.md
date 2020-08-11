@@ -17,7 +17,7 @@
 - [x] Edge
 
 ### Capture
-![Moster](moster.png)
+![MosterSites](captures/moster.png)
 
 # License
 MIT
