@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Moster",
+  "name": "MosterSites",
   "description": "Most Visited sites..",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icons": {
     "512": "icons/icon512.png",
     "256": "icons/icon256.png",
@@ -11,8 +11,8 @@
     "32": "icons/icon32.png"
   },
   "browser_action": {
-    "default_title": "Moster",
-    "default_popup": "popup.html",
+    "default_title": "MosterSites",
+    "default_popup": "index.html",
     "browser_style": false
   },
   "permissions": [

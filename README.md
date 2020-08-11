@@ -7,6 +7,12 @@
 
 </div>
 
+# MosterSites
+
+- [x] Get top visited websites
+- [x] Manage yours downloads
+- [x] Manage your browser history
+
 ### Tested On
 - [x] Chrome
 - [x] FireFox

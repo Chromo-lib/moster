@@ -1,2 +1,9 @@
+# Directories
 node_modules/
-dist/
+.vscode/
+build/
+
+# Files
+package-lock.json
+yarn-error.log
+yarn.lock
