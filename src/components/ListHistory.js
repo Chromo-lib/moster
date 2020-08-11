@@ -10,7 +10,7 @@ export default function ListHistory () {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    window.chrome.history.search({ text: '', maxResults: 15 }, (historySites) => {
+    window.chrome.history.search({ text: '', maxResults: 30 }, (historySites) => {
       setAllSites(historySites);
       setIsLoading(false);
     });

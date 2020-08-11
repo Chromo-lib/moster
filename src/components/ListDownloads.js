@@ -31,7 +31,7 @@ export default function ListDownloads () {
     c && window.chrome.downloads.erase({ id: file.id }, () => {
       setIsLoading(true);
       window.chrome.downloads.search({}, (downloads) => {
-        setState(downloads.slice(0, 20));
+        setState(downloads.slice(0, 30));
         setIsLoading(false);
       });
     });
