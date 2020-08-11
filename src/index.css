@@ -1,6 +1,6 @@
 :root {
-  --main-color: #242424;
-  --bg-card:#424242;
+  --main-color: #030e1a;
+  --bg-hover:#ffffff1a;
   --box-shadow: 0px 1.6px 3.6px rgba(0, 0, 0, 0.25), 0px 0px 2.9px rgba(0, 0, 0, 0.21);
 }
 
@@ -27,23 +27,25 @@ body {margin: 0; overflow-x: hidden;}
   text-transform: uppercase;
 }
 
-.list {height: 280px; padding: 5px; overflow-y: auto; scrollbar-width: thin; }
+.list {height: 280px; overflow-y: auto; scrollbar-width: thin; }
 
 header,.tabs {height:30px; background-color: #030e1a;}
 
 .tabs { position: fixed;bottom: 0;left: 0;right: 0;z-index: 9;}
-.tabs>span {flex: 1 1 33%; text-align: center; }
+.tabs span {flex: 1 1 33%; text-align: center; }
+
 /*******************************/
 ul { width: 100%; list-style: none; margin: 0; padding: 0;  }
-li {padding: 5px 10px; width: 100%;}
+li {padding: 7px 10px; width: 100%; border-bottom: 1px solid #030e1a82; cursor: pointer; transition: background .25s; }
+li:hover {background-color: var(--bg-hover);}
 
-a {transition: all .25s;}
-a:hover {color: #ffffff !important; text-decoration: initial;}
+a { text-decoration: none; transition: all .25s;}
+a:hover {color: #ffffff !important; }
 
 button {    background-color: #ff5151;
   color: #fff; border-radius: 4px; border: 1px solid #000; box-shadow: var(--box-shadow); transition:all .25s}
 
-button:hover {background-color: #e7e7e723; }
+button:hover {background-color: #030e1a; }
 
 svg {
   width: 12px;
@@ -94,6 +96,35 @@ hr {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+
+/**************************************/
+.spinner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-hover);
+  z-index: 999;
+}
+.spinner-border {
+  display: inline-block;
+  width: 4rem;
+  height:4rem;
+  vertical-align: text-bottom;
+  border: .25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border .75s linear infinite;
+}
+
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 /************ Scroll **************/
 ::-webkit-scrollbar {

@@ -16,7 +16,7 @@ export default function ListTopSites () {
   return (
     <ul>
       {allSites && allSites.map(site => <li key={site.id} className="truncate">
-        <a href={site.url} target="_blank" rel="noopener noreferrer" className="txt-muted">{site.title}</a>
+        <a href={site.url} target="_blank" rel="noopener noreferrer" className="truncate txt-muted">{site.title}</a>
       </li>)}
     </ul>
   );
