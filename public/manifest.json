@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "MosterSites",
-  "description": "All in one: Get most visited websites, manage yours downloads and your browser history..",
-  "version": "1.0.3",
+  "description": "All in one: Get most visited websites, manage yours downloads, your browser history and capture current tab..",
+  "version": "1.0.5",
   "icons": {
     "512": "icons/icon512.png",
     "256": "icons/icon256.png",
@@ -16,8 +16,11 @@
     "browser_style": false
   },
   "permissions": [
+    "activeTab",
     "history",
     "topSites",
-    "downloads"
+    "downloads",
+    "tabs",
+    "<all_urls>"
   ]
 }

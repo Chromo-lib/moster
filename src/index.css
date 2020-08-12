@@ -32,8 +32,21 @@ body {margin: 0; overflow-x: hidden;}
 header,.tabs {height:30px; background-color: #030e1a;}
 
 .tabs { position: fixed;bottom: 0;left: 0;right: 0;z-index: 9;}
-.tabs span {flex: 1 1 33%; text-align: center; }
+.tabs span {flex: 1 1 25%; text-align: center; }
 
+
+/*******************************/
+.cp-tab {justify-content: space-between; align-items: center;}
+.cp-tab button {
+  background-color: #01181f;
+  padding: 7px 20px;
+  margin: 10px 0;
+  border-radius: 0;
+  box-shadow: 0px 1.6px 3.6px rgba(0,0,0,0.25),0px 0px 2.9px rgba(0,0,0,0.21);
+}
+
+.cp-tab img {padding: 10px;}
+.w-52 { width: 52px !important;  height: 52px !important; }
 /*******************************/
 ul { width: 100%; list-style: none; margin: 0; padding: 0;  }
 li {padding: 7px 10px; width: 100%; border-bottom: 1px solid #030e1a82; cursor: pointer; transition: background .25s; }
@@ -46,18 +59,31 @@ svg { width: 12px;  height: 12px;}
 svg path {fill: #dddddd;}
 svg path:hover {fill: #00BCD4}
 
-button {    background-color: inherit;
-  color: #fff; border-radius: 4px; border: 0; transition:background .25s}
+button {
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 0;
+  transition: background-color .25s;
+  cursor: pointer;
+}
 
-button:hover {background-color: #ff5151; }
+button:hover {background-color: #ffffff1a;}
 
-button svg { width: 10px; }
-button svg path:hover {fill: #ffffff}
+ul li button { background-color: inherit; margin:0; border-radius: 4px; }
+
+ul li button:hover {background-color: #ff5151; }
+
+ul li button svg { width: 10px; }
+ul li button svg path:hover {fill: #ffffff}
 
 hr {
   margin: 0;
   border: 1px solid var(--main-color);
 }
+
+/************************************/
 
 .d-flex {
   display: flex;
@@ -78,7 +104,8 @@ hr {
   flex-wrap: wrap;
 }
 
-.m-0 {margin:0}
+.p-0 {padding:0 !important; }
+.m-0 {margin:0 !important; }
 .mt-0 {margin-top:0}
 .mr-10 {margin-right: 10px;}
 .ml-10 {margin-left: 10px;}

@@ -7,3 +7,5 @@ build/
 package-lock.json
 yarn-error.log
 yarn.lock
+*.zip
+*.rar

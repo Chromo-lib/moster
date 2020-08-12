@@ -1,10 +1,10 @@
 {
   "name": "monster-sites",
-  "private": true,  
+  "private": true,
   "description": "browser extension to get most visited websites, manage yours downloads and your browser history.",
-  "repository":  "https://github.com/Chromo-lib/moster",
+  "repository": "https://github.com/Chromo-lib/moster",
   "license": "BSD-3-Clause",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -12,7 +12,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build" },
+    "build": "react-scripts build"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
