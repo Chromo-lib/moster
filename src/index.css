@@ -1,7 +1,25 @@
 :root {
-  --main-color: #030e1a;
+  --main-color: #051629;
   --bg-hover:#ffffff1a;
+  --bg-header-footer:#030e1a;
   --box-shadow: 0px 1.6px 3.6px rgba(0, 0, 0, 0.25), 0px 0px 2.9px rgba(0, 0, 0, 0.21);
+  --txt-muted: #dddddd;
+  --txt-white:#ffffff;
+  --li-border-bottom: 1px solid #030e1a82;
+  --svg-hover:#00BCD4;
+  --bg-btn-delete-red: #ff5151;
+}
+
+html[data-theme='light'] {
+  --main-color: #f1f1f1;
+  --bg-hover:#0202021a;
+  --bg-header-footer:#e4e4e4;
+  --box-shadow: 0px 1.6px 3.6px rgba(255, 255, 255, 0.25), 0px 0px 2.9px rgba(255, 255, 255, 0.21);
+  --txt-muted: #414141;
+  --txt-white:#000000;
+  --li-border-bottom: 1px solid #20202082;
+  --svg-hover:#414141;
+  --bg-btn-delete-red: #ff515117;
 }
 
 @font-face {
@@ -14,7 +32,7 @@
 *::after {
   box-sizing: border-box;
   font-family: 'OpenSans';
-  font-size: 10px;
+  font-size: 12px;
 }
 
 body {margin: 0; overflow-x: hidden;}
@@ -22,69 +40,73 @@ body {margin: 0; overflow-x: hidden;}
 .container {
   width: 260px;
   height: 360px;
-  background: linear-gradient(to bottom right, #000000a6, #000000de), url(assets/bg.jpg);
-  color: #ffffff;
+  /* background: linear-gradient(to bottom right, #000000a6, #000000de), url(assets/bg.jpg); */
+  background-color:var(--main-color);
+  color: var(--txt-white);
   text-transform: uppercase;
 }
 
 .list {height: 300px; overflow-y: auto; scrollbar-width: thin; }
 
-header,.tabs {height:30px; background-color: #030e1a;}
+header {padding:0 10px; justify-content:flex-start!important;}
+header,.tabs {height:30px; background-color: var(--bg-header-footer);}
+header span {    font-size: 10px !important;}
+
+.btn-switch-theme {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  padding: 5px 10px;
+}
 
 .tabs { position: fixed;bottom: 0;left: 0;right: 0;z-index: 9;}
-.tabs span {flex: 1 1 25%; text-align: center; }
-
-
+.tabs span {flex: 1 1 20%; text-align: center; }
 /*******************************/
 .cp-tab {justify-content: space-between; align-items: center;}
-.cp-tab button {
-  background-color: #01181f;
+.cp-tab button {  
+  background-color: var(--bg-hover);
   padding: 7px 20px;
   margin: 10px 0;
   border-radius: 0;
-  box-shadow: 0px 1.6px 3.6px rgba(0,0,0,0.25),0px 0px 2.9px rgba(0,0,0,0.21);
 }
 
 .cp-tab img {padding: 10px;}
 .w-52 { width: 52px !important;  height: 52px !important; }
 /*******************************/
 ul { width: 100%; list-style: none; margin: 0; padding: 0;  }
-li {padding: 7px 10px; width: 100%; border-bottom: 1px solid #030e1a82; cursor: pointer; transition: background .25s; }
+li {padding: 7px 10px; width: 100%; border-bottom: var(--li-border-bottom); cursor: pointer; transition: background .25s; }
 li:hover {background-color: var(--bg-hover);}
 
 a { text-decoration: none; transition: all .25s;}
-a:hover {color: #ffffff !important; }
+a:hover {color: var(--txt-white) !important; }
 
 svg { width: 12px;  height: 12px;}
-svg path {fill: #dddddd;}
-svg path:hover {fill: #00BCD4}
+svg path {fill: var(--txt-muted);}
+svg path:hover {fill: var(--svg-hover)}
 
 button {
-  color: #fff;
+  color: var(--txt-white);
+  background-color: inherit;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 0;
   transition: background-color .25s;
   cursor: pointer;
+  outline: none !important;
 }
 
-button:hover {background-color: #ffffff1a;}
+button:hover {background-color: var(--bg-hover);}
 
 ul li button { background-color: inherit; margin:0; border-radius: 4px; }
 
-ul li button:hover {background-color: #ff5151; }
+ul li button:hover {background-color: var(--bg-btn-delete-red); }
 
 ul li button svg { width: 10px; }
-ul li button svg path:hover {fill: #ffffff}
+ul li button svg path:hover {fill: var(--txt-white)}
 
-hr {
-  margin: 0;
-  border: 1px solid var(--main-color);
-}
-
+hr { margin: 0; border: 1px solid var(--main-color);}
 /************************************/
-
 .d-flex {
   display: flex;
   flex-wrap: wrap;
@@ -114,7 +136,7 @@ hr {
 .h-100 {height: 100%;}
 .w-100 {width: 100%;}
 
-.txt-muted {color: #dddddd;}
+.txt-muted {color: var(--txt-muted);}
 .txt-left {text-align: left;}
 .txt-uppercase {text-transform: uppercase;}
 
@@ -126,7 +148,6 @@ hr {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 /**************************************/
 .spinner {
@@ -161,9 +182,9 @@ hr {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1d1e20;
+  background: var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3e3e;
+  background: var(--bg-hover);
 }
